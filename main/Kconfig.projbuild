@@ -1,0 +1,43 @@
+menu "Configuration"
+
+    config WIFI_SSID
+        string "WiFi SSID"
+        help
+            SSID (network name) for the example to connect to.
+
+    config WIFI_PASSWORD
+        string "WiFi Password"
+        help
+            WiFi password (WPA or WPA2) for the example to use.
+
+    config MAX_RETRY
+        int "Maximum retry"
+        default 5
+        help
+            Set the Maximum retry to avoid station reconnecting to the AP unlimited when the AP is really inexistent.
+
+    config STATIC_IP_ADDR
+        string "Static IP address"
+        default "192.168.0.77"
+        help
+            Set static IP address.
+
+    config STATIC_NETMASK_ADDR
+        string "Static netmask address"
+        default "255.255.255.0"
+        help
+            Set static netmask address.
+
+    config STATIC_GW_ADDR
+        string "Static gateway address"
+        default "192.168.0.1"
+        help
+            Set static gateway address.
+	
+	config TCP_SERVER_PORT
+		int "Tcp server port"
+		default 4321
+		help
+			Set tcp server port.
+
+endmenu
